@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Configuration Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-bottom: 3px solid #34495e;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+        .header p {
+            font-size: 0.95em;
+            color: #bdc3c7;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            background: white;
+        }
+        .section-header {
+            background: #f8f9fa;
+            color: #2c3e50;
+            padding: 14px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            border-bottom: 1px solid #ddd;
+        }
+        .section-header:hover {
+            background: #e9ecef;
+        }
+        .section-header h2 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .toggle-icon {
+            font-size: 1.2em;
+            color: #6c757d;
+            transition: transform 0.2s ease;
+        }
+        .section-header.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #ffffff;
+        }
+        .section-content.active {
+            max-height: 2000px;
+        }
+        .section-body {
+            padding: 20px;
+            background: #fafafa;
+        }
+        .info-item {
+            padding: 10px 12px;
+            margin-bottom: 6px;
+            background: white;
+            border-left: 3px solid #5a6268;
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #333;
+        }
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.85em;
+            background: #f8f9fa;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>System Configuration Report</h1>
+            <p>Author: Shruthi Sriram</p>
+            <p>Generated on: February 16, 2026 - 16:10:15</p>
+        </div>
+        <div class="content">            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Processor (CPU)</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Name= 12th Gen Intel(R) Core(TM) i7-1270P<br> Cores=12<br> Threads=16<br>Clockspeed= 2200</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Audio Devices</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>ProductName=Intel® Smart Sound Technology for Digital Microphones<br>Manufacturer=Intel(R) Corporation<br></div>
+                        <div class='info-item'>ProductName=USB Audio Device<br>Manufacturer=(Generic USB Audio)<br></div>
+                        <div class='info-item'>ProductName=Realtek High Definition Audio(SST)<br>Manufacturer=Realtek<br></div>
+                        <div class='info-item'>ProductName=Intel® Smart Sound Technology for Bluetooth® Audio<br>Manufacturer=Intel(R) Corporation<br></div>
+                        <div class='info-item'>ProductName=USB Audio Device<br>Manufacturer=(Generic USB Audio)<br></div>
+                        <div class='info-item'>ProductName=USB Audio 2.0<br>Manufacturer=Microsoft<br></div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Graphics Card</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Name=Intel(R) Iris(R) Xe Graphics<br>Processor=Intel(R) Iris(R) Xe Graphics Family<br> Driver=32.0.101.7026</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Operating System</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>caption=Microsoft Windows 11 Enterprise Version =10.0.26100<br>Manufacturer=Microsoft Corporation</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Motherboard</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Manufacturer=LENOVO<br> Product=21CCS3090Y<br> Serial=L1HF3A400GG</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>BIOS Information</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Manufacturer=LENOVO<br> BIOS=N3AET85W (1.50 )<br> Date=03/04/2025 05:30:00</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Network Adapters</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Name=Intel(R) Wi-Fi 6E AX211 160MHz<br> MAC=E4:0D:36:5C:4A:5E<br> IP=192.168.0.100</div>
+                        <div class='info-item'>Name=PANGP Virtual Ethernet Adapter Secure #2<br> MAC=02:50:41:00:00:01<br> IP=10.247.195.242</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>RAM Modules</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Manufacturer=Samsung<br> Capacity=4GB<br> Speed=6400MHz<br> Slot=Controller0-ChannelA</div>
+                        <div class='info-item'>Manufacturer=Samsung<br> Capacity=4GB<br> Speed=6400MHz<br> Slot=Controller0-ChannelB</div>
+                        <div class='info-item'>Manufacturer=Samsung<br> Capacity=4GB<br> Speed=6400MHz<br> Slot=Controller0-ChannelC</div>
+                        <div class='info-item'>Manufacturer=Samsung<br> Capacity=4GB<br> Speed=6400MHz<br> Slot=Controller0-ChannelD</div>
+                        <div class='info-item'>Manufacturer=Samsung<br> Capacity=4GB<br> Speed=6400MHz<br> Slot=Controller1-ChannelA</div>
+                        <div class='info-item'>Manufacturer=Samsung<br> Capacity=4GB<br> Speed=6400MHz<br> Slot=Controller1-ChannelB</div>
+                        <div class='info-item'>Manufacturer=Samsung<br> Capacity=4GB<br> Speed=6400MHz<br> Slot=Controller1-ChannelC</div>
+                        <div class='info-item'>Manufacturer=Samsung<br> Capacity=4GB<br> Speed=6400MHz<br> Slot=Controller1-ChannelD</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Total System Memory</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>31.68 GB</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Physical Disks</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Model=SanDisk Ultra USB 3.0 USB Device<br> Size=114.56GB<br> Type=Removable Media<br> Interface=USB</div>
+                        <div class='info-item'>Model=INTEL SSDPEKNW512G8<br> Size=476.94GB<br> Type=Fixed hard disk media<br> Interface=SCSI</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Disk Partitions</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Drive=C:<br> Label=OSDisk<br> Size=471.56GB<br> Free=106.62GB</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Computer System Information</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Name=SRANGA2-MOBL2<br> Manufacturer=LENOVO<br> Model=21CCS3090Y<br> Domain=gar.corp.intel.com<br> Workgroup=<br> User=GAR\sranga2</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>System Uptime</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Days=0<br> Hours=19<br> Minutes=23</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Time Zone</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>TimeZone=(UTC+05:30) Chennai<br> Kolkata<br> Mumbai<br> New Delhi<br> Id=India Standard Time<br> Offset=05:30:00</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Current User</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>GAR\sranga2</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Battery Status</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Name=5B11M90056<br> Charge=99%<br> Status=2</div>
+                    </div>
+                </div>
+            </div>            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2>Monitor Information</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">                        <div class='info-item'>Manufacturer=LEN<br> Name=</div>
+                        <div class='info-item'>Manufacturer=DEL<br> Name=DELL P2418HZm</div>
+                    </div>
+                </div>
+            </div>        </div>
+        <div class="footer">
+            <p>System Configuration Report | PowerShell Script | 2026</p>
+        </div>
+    </div>
+    <script>
+        function toggleSection(header) {
+            header.classList.toggle('active');
+            const content = header.nextElementSibling;
+            content.classList.toggle('active');
+        }
+        
+        // Open first section by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstHeader = document.querySelector('.section-header');
+            if (firstHeader) {
+                toggleSection(firstHeader);
+            }
+        });
+    </script>
+</body>
+</html>
