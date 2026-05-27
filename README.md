@@ -220,4 +220,3 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 ---
 
-> *"Good automation doesn't just save time — it creates consistency, accuracy, and a paper trail."*
